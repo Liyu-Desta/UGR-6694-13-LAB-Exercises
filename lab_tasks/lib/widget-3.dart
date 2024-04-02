@@ -26,27 +26,133 @@ class Cart extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: const Text('BMI Calculator'),
+          title: SizedBox(child: const Text('BMI Calculator')),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Column(
               children: [
-                Text(
-                  '+',
-                  style: TextStyle(fontSize: 24),
+                SizedBox(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        'Male',
+                        style:
+                            TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        'Female',
+                        style:
+                            TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
                 ),
-                Text(
-                  '1.0',
-                  style: TextStyle(fontSize: 24),
+                SizedBox(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        children: [
+                          Text(
+                            'HEIGHT',
+                            style: TextStyle(
+                                fontSize: 34, fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            '176cm',
+                            style: TextStyle(
+                                fontSize: 34, fontWeight: FontWeight.bold),
+                          ),
+                          Divider(
+                            // Add a Divider widget
+                            color: Colors.black, // Optionally specify the color
+                            thickness: 2, // Optionally specify the thickness
+                            indent: 20, // Optionally specify the start indent
+                            endIndent: 20, // Optionally specify the end indent
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
-                Text(
-                  '-',
-                  style: TextStyle(fontSize: 24),
-                ),
+                SizedBox(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SizedBox(
+                        child: Column(
+                          children: [
+                            Text(
+                              'WEIGHT',
+                              style: TextStyle(
+                                  fontSize: 34, fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              '60',
+                              style: TextStyle(
+                                  fontSize: 34, fontWeight: FontWeight.bold),
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  '-',
+                                  style: TextStyle(
+                                      fontSize: 34, fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  '+',
+                                  style: TextStyle(
+                                      fontSize: 34, fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        child: Column(
+                          children: [
+                            Text(
+                              'AGE',
+                              style: TextStyle(
+                                  fontSize: 34, fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              '23',
+                              style: TextStyle(
+                                  fontSize: 34, fontWeight: FontWeight.bold),
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  '-',
+                                  style: TextStyle(
+                                      fontSize: 34, fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  '+',
+                                  style: TextStyle(
+                                      fontSize: 34, fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                )
               ],
-            )
+            ),
+            SizedBox(
+              child: Text(
+                'CALCULATE',
+                style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
+              ),
+            ),
           ],
         ));
   }
